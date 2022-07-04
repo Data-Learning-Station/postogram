@@ -15,7 +15,7 @@ model User {
   username String @unique
   password String
 
-  fistName String
+  firstName String
   lastName String
   age      Int
   token    String
