@@ -1,10 +1,14 @@
 import { prisma } from "../config/database"
 
-export function createUser(username, password) {
+export function createUser(username, password, firstName, lastName, age, token) {
     return prisma.user.create({
         data: {
             username,
-            password
+            password,
+            firstName,
+            lastName,
+            age,
+            token
         }
     })
 }
