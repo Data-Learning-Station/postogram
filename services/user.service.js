@@ -13,6 +13,14 @@ export function createUser(username, password, firstName, lastName, age, token) 
     })
 }
 
+export function findUserByToken(token) {
+    return prisma.user.findUnique({
+        where: {
+            token
+        }
+    })
+}
+
 export function findUser(username) {
     return prisma.user.findUnique({
         where: {
