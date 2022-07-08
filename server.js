@@ -5,6 +5,7 @@ import dotenv from 'dotenv'
 import authRoutes from './routes/auth.routes.js'
 import verificationRoutes from './routes/verification.routes.js'
 import authentificationMiddleware from './middlewares/autentification.js'
+import uploadRoutes from './routes/upload.routes.js'
 
 dotenv.config()
 
@@ -16,6 +17,8 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(authRoutes)
 app.use(verificationRoutes)
+app.use(uploadRoutes)
+
 app.use(authentificationMiddleware)
 
 const port = process.env.PORT || 8080
