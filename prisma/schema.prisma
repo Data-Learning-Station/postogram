@@ -31,7 +31,6 @@ model Post {
 
   media     String
   mediaType MediaType
-
   title     String
   description String
 }

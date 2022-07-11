@@ -1,6 +1,6 @@
 import { findUserByToken } from "../services/user.service.js"
 
-const authentificationMiddleware = async (req, res, next) => {
+const authentification = async (req, res, next) => {
 
   if (!req.header('Authorization')) {
     return res.status(401).json({
@@ -23,4 +23,4 @@ const authentificationMiddleware = async (req, res, next) => {
   next()
 }
 
-export default authentificationMiddleware
+export default authentification
