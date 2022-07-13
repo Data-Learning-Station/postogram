@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>Register</title>
+</head>
+<body class="vh-100 d-flex justify-content-center align-items-center ">
+  <div class="card shadow" style="width: 24rem;">
+    
+    <form action="http://localhost:8000/register" method="post" class="card-body" enctype="multipart/form-data">
+
+      <h4 class="card-title text-center">Register</h4>
+      <hr>
+
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input name="username" class="form-control"placeholder="username">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input name="password" type="password" class="form-control" type="password" placeholder="password">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Confirm Password</label>
+        <input name="confirmPassword" type="confirmPassword" class="form-control" type="password" placeholder="retype password">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">FirstName</label>
+        <input name="firstName" type="text" class="form-control" placeholder="Firstname">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">LastName</label>
+        <input name="lastName" type="text" class="form-control" placeholder="LastName">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Age</label>
+        <input name="age" type="number" class="form-control" placeholder="Age">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Select avatar</label>
+        <input name="avatar" class="form-control" type="file">
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100"> Register </button>
+
+    </form>
+  </div>
+</body>
+</html>
