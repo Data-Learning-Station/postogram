@@ -37,6 +37,8 @@ router.post('/login', async (req, res) => {
 
     const { username, password } = req.body
 
+    console.log(req.body);
+
     const existsUser = await findUser(username)
     if (!existsUser) {
         res.status(400).json({

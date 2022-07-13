@@ -21,6 +21,7 @@ model User {
   age       Int
   token     String @unique
   posts     Post[]
+  comments  Comment[]
 }
 
 model Post {
@@ -33,6 +34,20 @@ model Post {
   mediaType MediaType
   title     String
   description String
+  date      DateTime @default(now())
+  comments  Comment[]
+}
+
+model Comment {
+    id       Int  @id @default(autoincrement())
+    message  String
+    post     Post @relation(fields: [postId], references: [id])
+    postId   Int
+    
+    author   User @relation(fields: [authorId], references: [id])
+    authorId Int
+
+    date     DateTime @default(now())
 }
 
 enum MediaType {
