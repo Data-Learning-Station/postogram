@@ -8,7 +8,6 @@ const router = Router()
 router.post('/register', multerUpload.single('avatar'), async (req, res) => {
 
     const { username, password, firstName, lastName, age } = req.body
-
     const avatar = req.file.filename
 
     const existUser = await findUser(username)
@@ -36,8 +35,6 @@ router.post('/register', multerUpload.single('avatar'), async (req, res) => {
 router.post('/login', async (req, res) => {
 
     const { username, password } = req.body
-
-    console.log(req.body);
 
     const existsUser = await findUser(username)
     if (!existsUser) {

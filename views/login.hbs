@@ -1,0 +1,45 @@
+  <body>
+    <div class="navbar bg-light shadow justify-content-center">
+      <div class="navbar-brand flex">
+        <h2 class="text-center">Postogram</h2>
+      </div>
+    </div>
+
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+      <form
+        action="http://localhost:8000/login"
+        method="post"
+        class="card shadow"
+        style="width: 18rem"
+      >
+        <div class="card-body">
+          <h4 class="card-title text-center">Login</h4>
+          <hr />
+
+          <div class="mb-3">
+            <label for="usernameInput" class="form-label">Username</label>
+            <input
+              name="username"
+              type="username"
+              class="form-control"
+              id="usernameInput"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Username</label>
+            <input
+              name="password"
+              type="username"
+              class="form-control"
+              type="password"
+              id="passwordInput"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Log in</button>
+          <a href="register.html" class="btn btn-secondary w-100 mt-3">Register</a>
+        </div>
+      </form>
+    </div>
+  </body>
