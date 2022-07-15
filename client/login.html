@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <title>Document</title>
-</head>
-
-<body class="vh-100 d-flex justify-content-center align-items-center ">
-  <form action="http://localhost:8000/login" method="post" class="card shadow" style="width: 18rem;">
-    <div class="card-body">
-      <h4 class="card-title text-center">Login</h4>
-      <hr>
-
-      <div class="mb-3">
-        <label for="usernameInput" class="form-label">Username</label>
-        <input name="username" type="username" class="form-control" id="usernameInput" placeholder="username">
+  <body>
+    <div class="navbar bg-light shadow justify-content-center">
+      <div class="navbar-brand flex">
+        <h2 class="text-center">Postogram</h2>
       </div>
-
-      <div class="mb-3">
-        <label for="passwordInput" class="form-label">Username</label>
-        <input name="password" type="username" class="form-control" type="password" id="passwordInput"
-          placeholder="password">
-      </div>
-
-      <button type="submit" class="btn btn-primary w-100"> Log in </button>
-
     </div>
-  </form>
-</body>
+
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+      <form
+        action="http://localhost:8000/login"
+        method="post"
+        class="card shadow"
+        style="width: 18rem"
+      >
+        <div class="card-body">
+          <h4 class="card-title text-center">Login</h4>
+          <hr />
+
+          <div class="mb-3">
+            <label for="usernameInput" class="form-label">Username</label>
+            <input
+              name="username"
+              type="username"
+              class="form-control"
+              id="usernameInput"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Username</label>
+            <input
+              name="password"
+              type="username"
+              class="form-control"
+              type="password"
+              id="passwordInput"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Log in</button>
+          <a href="register.html" class="btn btn-secondary w-100 mt-3">Register</a>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
