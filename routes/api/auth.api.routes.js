@@ -4,7 +4,7 @@ import authBl from "../../bl/auth.bl.js";
 
 const router = Router()
 
-router.post('/register', multerUpload.single('avatar'), async (req, res) => {
+router.post('/api/register', multerUpload.single('avatar'), async (req, res) => {
 
     const { username, password, firstName, lastName, age } = req.body
     const avatar = req.file.filename
@@ -18,7 +18,7 @@ router.post('/register', multerUpload.single('avatar'), async (req, res) => {
 })
 
 
-router.post('/login', async (req, res) => {
+router.post('/api/login', async (req, res) => {
 
     const { username, password } = req.body
 
